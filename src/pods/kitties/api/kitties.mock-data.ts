@@ -1,4 +1,3 @@
-import { images } from "assets/images";
 import { KittyApi } from "./kitties.api-model";
 
 export const mockKittiesList: KittyApi[] = [

@@ -1,12 +1,14 @@
-const merge = require('webpack-merge');
+const { mergeWithCustomize, customizeObject } = require('webpack-merge');
 const Dotenv = require('dotenv-webpack');
 const base = require('./base');
 const helpers = require('./helpers');
 
 const hotReloadingEntries = ['react-hot-loader/patch'];
 
-module.exports = merge.strategy({
-  entry: 'prepend',
+module.exports = mergeWithCustomize({
+  customizeObject: customizeObject({
+    entry: 'prepend',
+  }),
 })(base, {
   mode: 'development',
   devtool: 'inline-source-map',
