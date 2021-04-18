@@ -33,19 +33,4 @@ module.exports = mergeWithCustomize({
       path: 'dev.env',
     }),
   ],
-  module: {
-    rules: [
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file-loader',
-        options: {
-          name: 'img/[name].[ext]',
-        },
-      },
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      },
-    ],
-  },
 });

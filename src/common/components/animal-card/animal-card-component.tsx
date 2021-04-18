@@ -29,7 +29,7 @@ export const AnimalCardComponent: React.FC<Props> = ({
               onChange={(event: any, checked: boolean) => onBuyAnimal(animal.id, checked)}
             />
           }
-          label={ animal.selected ? "Añadir al carrito" : "Quitar del carrito"}
+          label={ !animal.selected ? "Añadir al carrito" : "Quitar del carrito"}
         />
       </div>
     </div>
